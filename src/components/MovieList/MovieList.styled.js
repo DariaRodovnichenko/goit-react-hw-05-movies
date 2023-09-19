@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const MovieListContainer = styled.div`
- max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
 `;
 
 export const MoviesList = styled.ul`
@@ -16,7 +16,7 @@ export const MoviesList = styled.ul`
 `;
 
 export const StyledLink = styled(Link)`
-font-size: 20px;
-font-weight: bold;
-color: darkblue;
-`
+  font-size: 20px;
+  font-weight: bold;
+  color: darkblue;
+`;

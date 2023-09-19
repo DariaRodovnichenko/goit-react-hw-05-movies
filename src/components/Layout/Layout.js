@@ -7,7 +7,7 @@ export const Layout = () => {
   return (
     <LayoutContainer>
       <Header>
-        <Logo>TMDB</Logo>
+        <Logo to="/" end>TMDB</Logo>
         <Navigation>
           <NavLink to="/" end>
             Home

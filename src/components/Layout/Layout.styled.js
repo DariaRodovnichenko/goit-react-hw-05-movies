@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const LayoutContainer = styled.div`
@@ -13,8 +14,9 @@ export const Header = styled.header`
   justify-content: space-between;
 `;
 
-export const Logo = styled.h1`
-  font-size: 20px;
+export const Logo = styled(NavLink)`
+  font-size: 28px;
+  font-weight: bold;
   margin: 0;
 `;
 
@@ -23,6 +25,7 @@ export const Navigation = styled.nav`
   gap: 32px;
   justify-content: space-between;
   align-items: center;
+  font-size: 20px;
 `;
 
 export const Footer = styled.footer`
