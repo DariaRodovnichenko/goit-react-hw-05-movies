@@ -2,9 +2,15 @@ import { Loader } from 'components/Loader/Loader';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchCast } from 'services/Api';
-import { ActorName, CastCard, CastContainer, CastImg, Character } from './Cast.styled';
+import {
+  ActorName,
+  CastCard,
+  CastContainer,
+  CastImg,
+  Character,
+} from './Cast.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
   const [loader, setLoader] = useState(true);
@@ -47,3 +53,5 @@ export const Cast = () => {
     </div>
   );
 };
+
+export default Cast;

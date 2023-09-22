@@ -17,7 +17,7 @@ import {
   MovieTitle,
 } from './MovieDetails.styled';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const [error, setError] = useState(null);
@@ -94,3 +94,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;

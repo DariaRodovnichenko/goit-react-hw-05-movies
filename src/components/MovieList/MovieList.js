@@ -2,7 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { MovieListContainer, MoviesList, StyledLink } from './MovieList.styled';
 import { MovieImg } from 'pages/MovieDetails/MovieDetails.styled';
 
-export const MovieList = ({ movies }) => {
+const MovieList = ({ movies }) => {
   const location = useLocation();
   return (
     <MovieListContainer>
@@ -22,3 +22,5 @@ export const MovieList = ({ movies }) => {
     </MovieListContainer>
   );
 };
+
+export default MovieList;

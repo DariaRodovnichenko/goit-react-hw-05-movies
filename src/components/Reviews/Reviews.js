@@ -2,9 +2,16 @@ import { Loader } from 'components/Loader/Loader';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchReviews } from 'services/Api';
-import { ErrTxt, ReviewAuthor, ReviewContent, ReviewItem, ReviewList, ReviewsContainer } from './Reviews.styled';
+import {
+  ErrTxt,
+  ReviewAuthor,
+  ReviewContent,
+  ReviewItem,
+  ReviewList,
+  ReviewsContainer,
+} from './Reviews.styled';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [loader, setLoader] = useState(true);
@@ -47,3 +54,5 @@ export const Reviews = () => {
     </ReviewsContainer>
   );
 };
+
+export default Reviews;

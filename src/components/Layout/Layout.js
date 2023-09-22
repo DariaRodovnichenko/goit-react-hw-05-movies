@@ -1,18 +1,26 @@
 import { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
-import { Footer, Header, LayoutContainer, Logo, Navigation } from './Layout.styled';
+import {
+  Footer,
+  Header,
+  LayoutContainer,
+  Logo,
+  Navigation,
+} from './Layout.styled';
 
-export const Layout = () => {
+const Layout = () => {
   return (
     <LayoutContainer>
       <Header>
-        <Logo to="/" end>TMDB</Logo>
+        <Logo to="/" end>
+          TMDB
+        </Logo>
         <Navigation>
           <NavLink to="/" end>
             Home
           </NavLink>
-          <NavLink to="/movies" >Search</NavLink>
+          <NavLink to="/movies">Search</NavLink>
         </Navigation>
       </Header>
       <Suspense fallback={<Loader />}>
@@ -24,3 +32,5 @@ export const Layout = () => {
     </LayoutContainer>
   );
 };
+
+export default Layout;

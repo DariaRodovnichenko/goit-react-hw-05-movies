@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { fetchTrendingMovies } from 'services/Api';
 import { Loader } from 'components/Loader/Loader';
-import { MovieList } from 'components/MovieList/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 import { HomeContainer, Title } from './Home.styled';
 
-export const Home = () => {
+const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);
   const [loader, setLoader] = useState(true);
 
@@ -35,3 +35,5 @@ export const Home = () => {
     </HomeContainer>
   );
 };
+
+export default Home;

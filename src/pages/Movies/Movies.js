@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MovieList } from 'components/MovieList/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 import { fetchMovies } from 'services/Api';
 import { Loader } from 'components/Loader/Loader';
 import { useSearchParams } from 'react-router-dom';
@@ -16,7 +16,7 @@ const debounce = (func, delay) => {
   };
 };
 
-export const Movies = () => {
+const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [loader, setLoader] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -72,3 +72,5 @@ export const Movies = () => {
     </MoviesContainer>
   );
 };
+
+export default Movies;
